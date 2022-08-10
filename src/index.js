@@ -1,6 +1,6 @@
 import './style.css';
 
-let list = [
+const list = [
   {
     description: 'Wash Dishes',
     iscompleted: false,
@@ -12,7 +12,6 @@ let list = [
     index: 1,
   },
 ];
-const listEl = document.querySelector('ul');
 
 function todoList() {
   document.querySelector('.todo-list').innerHTML = '';
