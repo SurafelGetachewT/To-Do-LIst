@@ -13,7 +13,7 @@ const list = [
   },
 ];
 
-function todoList() {
+const todoList() = () => {
   document.querySelector('.todo-list').innerHTML = '';
   list.forEach((item) => {
     const taskElement = document.createElement('li');
