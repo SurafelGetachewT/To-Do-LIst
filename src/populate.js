@@ -13,3 +13,9 @@ export const updateIndex = (list) => {
     i += 1;
   });
 };
+
+export const removeDone = (list) => {
+  list = list.filter((elem) => elem.isCompleted === false);
+  updateIndex(list);
+  saveLocal(list);
+}
