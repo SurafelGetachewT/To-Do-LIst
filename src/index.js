@@ -1,4 +1,5 @@
 import * as task from './populate.js';
+import * as stat from './status.js';
 import './style.css';
 
 let list = [];
@@ -19,6 +20,11 @@ const todoList = () => {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('task-check');
+    //check box event listener
+    checkbox.addEventListener('click', () => {
+      stat.status(item, list);
+      todoList();
+    });
     checkbox.checked = item.isCompleted;
     taskElement.appendChild(checkbox);
     const taskText = document.createElement('input');
@@ -27,7 +33,7 @@ const todoList = () => {
     taskText.addEventListener('change', () => {
       if (taskText.value.length > 0) {
         item.description = taskText.value;
-        task.saveLocal(list);
+        stat.saveLocal(list);
       }
     });
     taskElement.appendChild(taskText);
@@ -52,7 +58,7 @@ const removeItem = (e) => {
   });
   btn.closest('li').remove();
   task.updateIndex(list);
-  task.saveLocal(list);
+  stat.saveLocal(list);
 };
 
 listEl.addEventListener('click', removeItem);
