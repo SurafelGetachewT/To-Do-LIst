@@ -2,7 +2,6 @@ export const saveLocal = (list) => {
   window.localStorage.setItem('localTasks', JSON.stringify(list));
 };
 
-
 export const status = (elem, list) => {
   list.forEach((task) => {
     if (task === elem) {
@@ -10,4 +9,4 @@ export const status = (elem, list) => {
     }
   });
   saveLocal(list);
-}
+};

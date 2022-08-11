@@ -20,7 +20,6 @@ const todoList = () => {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('task-check');
-    //check box event listener
     checkbox.addEventListener('click', () => {
       stat.status(item, list);
       todoList();
