@@ -32,7 +32,7 @@ const todoList = () => {
     taskElement.draggable = 'true';
     document.querySelector('.todo-list').appendChild(taskElement);
   });
-}
+};
 
 const onPageLoad = () => {
   todoList();
