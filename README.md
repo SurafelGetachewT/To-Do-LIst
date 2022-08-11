@@ -29,7 +29,10 @@ This is built using ES6 and Webpack!
 To get a local copy up and running follow these simple example steps.
 
 - Open terminal
-- Clone this project by the command `git clone https://github.com/SurafelGetachewT/To-Do-LIst.git`
+- Clone this project by the command `git clone https://github.com/SurafelGetachewT/To-Do-LIst.git`.
+- Run npm install
+- Run npm run build
+- Run npm start
 - Run `npm start` in your local browser or using Live Server in Visual Studio Code.
 
 ### Prerequisites
