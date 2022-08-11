@@ -27,7 +27,7 @@ const todoList = () => {
     taskText.addEventListener('change', () => {
       if (taskText.value.length > 0) {
         item.description = taskText.value;
-        stat.saveLocal(list);
+        task.saveLocal(list);
       }
     });
     taskElement.appendChild(taskText);
@@ -38,7 +38,7 @@ const todoList = () => {
     taskElement.draggable = 'true';
     document.querySelector('.todo-list').appendChild(taskElement);
   });
-}
+};
 
 const removeItem = (e) => {
   if (!e.target.classList.contains('deleteBtn')) {
@@ -52,8 +52,9 @@ const removeItem = (e) => {
   });
   btn.closest('li').remove();
   task.updateIndex(list);
-  stat.saveLocal(list);
-}
+  task.saveLocal(list);
+};
+
 listEl.addEventListener('click', removeItem);
 todoList();
 document.querySelector('#taskForm').addEventListener('submit', (event) => {
