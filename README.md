@@ -14,7 +14,7 @@ This is built using ES6 and Webpack!
 
 ## Live Demo
 
-[Live Demo Link](Coming soon...)
+[Live Demo Link](https://surafelgetachewt.github.io/to-do-list.github.io/dist/)
 
 ## Getting Started
 
